@@ -1,0 +1,23 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "798e5361-b41f-4d23-b6c2-189e9d36ea59"
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".idea"
+      "build"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    showInvisibles: true
+  "exception-reporting":
+    userId: "3da6ac3d-bdc0-43b1-bdf1-8c5427d7c1be"
+  welcome:
+    showOnStartup: false

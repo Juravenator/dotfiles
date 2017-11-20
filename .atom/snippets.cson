@@ -1,0 +1,4 @@
+'.source':
+  'tab':
+    'prefix': 'tb'
+    'body': '\t'
