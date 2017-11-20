@@ -4,4 +4,4 @@ git clone --separate-git-dir=$HOME/.cfg https://github.com/Juravenator/dotfiles.
 cp $HOME/myconf-tmp/* ~
 rm -rf $HOME/myconf-tmp
 
-config config status.showUntrackedFiles no
+dotfiles config status.showUntrackedFiles no
