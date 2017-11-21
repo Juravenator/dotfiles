@@ -1,0 +1,19 @@
+sudo su -
+ypcat passwd | grep dirkxg > /tmp/dirkxgpasswd
+vipw
+  # pick vim, delete ~/.selected_editor if needed
+  :r /tmp/dirkxgpasswd
+  # change the password hash to 'x', and change your home directory
+  # example: dirkxg:x:20661:9000:Glenn Dirkx:/usr/localdisk/home/users/dirkxg:/bin/zsh
+vipw -s
+  :r /tmp/dirkxgpasswd
+  # delete all columns after the password hash, and add ':17410:0:99999:7:::'
+  # the number 17410 is not important, the others are
+  # example: dirkxg:$hashhash/:17410:0:99999:7:::
+vim /etc/group
+  # add yourself to the edgm_cc_we2 group
+  # example: edgm_cc_we2:x:9000:dirkxg
+mkdir -p /usr/localdisk/home/users/dirkxg/
+chown dirkxg:9000 /usr/localdisk/home/users/dirkxg/
+exit
+cp -auv /home/users/dirkxg /usr/localdisk/home/users/
