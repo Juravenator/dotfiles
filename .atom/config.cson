@@ -16,6 +16,7 @@
     ]
     telemetryConsent: "limited"
   editor:
+    fontFamily: "Fira Code"
     showInvisibles: true
   "exception-reporting":
     userId: "3da6ac3d-bdc0-43b1-bdf1-8c5427d7c1be"
