@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws command-not-found common-aliases compleat docker history jira nyan sudo)
+plugins=(git aws command-not-found common-aliases compleat docker history nyan sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,3 +95,4 @@ source ~/git/wifi-doctor-deployment/util-scripts/alias
 
 export PATH="$PATH:$DEPLOY_REPO_DIR/util-scripts"
 alias dotfiles='/usr/bin/git --git-dir=/usr/localdisk/home/users/dirkxg/.cfg/ --work-tree=/usr/localdisk/home/users/dirkxg'
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"

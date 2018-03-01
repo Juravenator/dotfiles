@@ -174,3 +174,5 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+shift+m exec ~/lock.sh 
 
 exec compton
+
+bindsym $mod+shift+s exec ksnapshot
