@@ -9,6 +9,13 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -84,9 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:/usr/localdisk/caches/git/wifi-doctor-deployment/.rvm/bin"
-
 # add user scripts
 export PATH="$PATH:/usr/localdisk/home/users/dirkxg/scripts"
 
@@ -96,3 +100,6 @@ source ~/git/wifi-doctor-deployment/util-scripts/alias
 export PATH="$PATH:$DEPLOY_REPO_DIR/util-scripts"
 alias dotfiles='/usr/bin/git --git-dir=/usr/localdisk/home/users/dirkxg/.cfg/ --work-tree=/usr/localdisk/home/users/dirkxg'
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:/usr/localdisk/caches/git/wifi-doctor-deployment/.rvm/bin"
