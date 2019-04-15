@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+! setxkbmap -query | grep layout | grep us > /dev/null
+
+if [[ "${PIPESTATUS[2]}" == "0" ]]; then
+  setxkbmap pl -variant dvp
+else
+  setxkbmap us
+fi
