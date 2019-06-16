@@ -1,0 +1,2 @@
+xscreensaver &
+xscreensaver-command -lock
