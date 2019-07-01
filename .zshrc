@@ -92,8 +92,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # add user scripts
-export PATH="$PATH:/usr/localdisk/home/users/dirkxg/scripts"
+export PATH="$PATH:$HOME/scripts:$HOME/.gem/ruby/2.6.0/bin"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+source /usr/share/nvm/init-nvm.sh
 
 export EDITOR=vim
 export POWERLEVEL9K_MODE='nerdfont-complete'
