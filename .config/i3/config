@@ -225,6 +225,9 @@ bindcode $mod+shift+58 exec $HOME/scripts/lock
 bindsym Pause exec $HOME/scripts/lock
 bindsym Scroll_Lock exec systemctl suspend
 
+default_border none
+default_floating_border none
+
 exec compton
 exec fluxgui
 exec firefox
