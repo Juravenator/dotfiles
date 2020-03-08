@@ -36,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -59,11 +59,9 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   sudo
   command-not-found
   common-aliases
-  compleat
   docker
   history
 )
@@ -101,10 +99,10 @@ source $ZSH/oh-my-zsh.sh
 
 
 # add user scripts
-export PATH="$PATH:$HOME/scripts:$HOME/Downloads/Postman"
+export PATH="$PATH:$HOME/bin"
 source $HOME/.cargo/env
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias plz="sudo"
-alias squee="pacman"
+alias squee="yay"
 source /usr/share/nvm/init-nvm.sh

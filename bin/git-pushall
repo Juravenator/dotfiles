@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -o errexit -o nounset -o pipefail
+
+FIRST_REMOTE=`git remote get-url origin`
+PROJECT_NAME=`echo $FIRST_REMOTE | sed -E 's|.*[jJ]uravenator/(.*).git$|\1|'`
+
+git remote remove origin
+git remote add origin "git@gitlab.com:juravenator/$PROJECT_NAME.git"
+git remote set-url --add origin "git@github.com:Juravenator/$PROJECT_NAME.git"
+
+CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+git push -u origin $CURRENT_BRANCH
+git push --all

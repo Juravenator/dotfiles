@@ -194,7 +194,7 @@ bindsym $option+End exec playerctl play-pause
 bindsym --whole-window button8 exec --no-startup-id amixer -D pulse set Master 1+ toggle
 
 # toggle keyboard script
-bindsym control+space exec $HOME/scripts/togglekeyboard
+bindsym control+space exec $HOME/bin/togglekeyboard
 exec setxkbmap pl -variant dvp
 
 # tap to click & natural scrolling on trackpad
@@ -221,8 +221,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # mod+shift+m
-bindcode $mod+shift+58 exec $HOME/scripts/lock
-bindsym Pause exec $HOME/scripts/lock
+bindcode $mod+shift+58 exec $HOME/bin/lock
+bindsym Pause exec $HOME/bin/lock
 bindsym Scroll_Lock exec systemctl suspend
 
 default_border none
