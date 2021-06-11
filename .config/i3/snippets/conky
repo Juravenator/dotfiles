@@ -1,0 +1,2 @@
+assign [class="Conky"] $ws10
+for_window [class="Conky"] floating enable

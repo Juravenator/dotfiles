@@ -1,0 +1,3 @@
+exec pqiv -ci --disable-scaling '/home/glenn/Pictures/Velociraptor_BW_by_SilverXenomorph.png'
+
+for_window [class="Pqiv"] floating enable

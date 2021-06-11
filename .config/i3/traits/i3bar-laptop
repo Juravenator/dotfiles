@@ -1,0 +1,13 @@
+bar {
+  #status_command i3status
+  status_command i3blocks -c ~/.config/i3blocks/config
+  tray_output primary
+  position top
+  mode hide
+  modifier $mod
+  i3bar_command i3bar --transparency
+  colors {
+    background #00000080
+  }
+  font pango:Proza Libre 12
+}

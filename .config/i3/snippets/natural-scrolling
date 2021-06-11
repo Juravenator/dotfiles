@@ -1,0 +1,2 @@
+# tap to click & natural scrolling on trackpad
+exec touchpad_config -e 13

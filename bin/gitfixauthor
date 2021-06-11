@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+if [[ -z "${1:-}" || -z "${2:-}" || -z "${3:-}" ]]; then
+  >&2 echo "usage: $0 <old email> <correct name> <correct email>"
+  exit 1
+fi
+
+export OLD_EMAIL=$1
+export CORRECT_NAME=$2
+export CORRECT_EMAIL=$3
+export FILTER_BRANCH_SQUELCH_WARNING=1
+
+git filter-branch -f --env-filter "
+if [ \"\$GIT_COMMITTER_EMAIL\" = \"$OLD_EMAIL\" ]
+then
+export GIT_COMMITTER_NAME=\"$CORRECT_NAME\"
+export GIT_COMMITTER_EMAIL=\"$CORRECT_EMAIL\"
+fi
+if [ \"\$GIT_AUTHOR_EMAIL\" = \"$OLD_EMAIL\" ]
+then
+export GIT_AUTHOR_NAME=\"$CORRECT_NAME\"
+export GIT_AUTHOR_EMAIL=\"$CORRECT_EMAIL\"
+fi
+" --tag-name-filter cat -- --branches --tags

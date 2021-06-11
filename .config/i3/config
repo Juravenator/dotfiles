@@ -1,0 +1,126 @@
+###########################################################
+# Automatically generated on Thu 10 Jun 23:45:51 CEST 2021
+# Do not edit. Rather, re-generate using command
+# bash build.sh snippets/raptor traits/i3bar-basic > config
+###########################################################
+
+## include traits/global
+set $mod Mod4
+set $option Mod1
+font pango:Proza Libre 10
+## include ../snippets/workspaces-basic
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "Dashboard"
+## /include ../snippets/workspaces-basic
+## include ../snippets/keybinds-basic
+floating_modifier $mod
+bindsym $mod+Return exec xfce4-terminal 
+bindcode $mod+Shift+24 kill
+bindcode $mod+43 exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindcode $mod+44 split h
+bindcode $mod+55 split v
+bindcode $mod+41 fullscreen toggle
+bindcode $mod+39 layout stacking
+bindcode $mod+25 layout tabbed
+bindcode $mod+26 layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindcode $mod+38 focus parent
+bindcode $mod+10 workspace $ws1
+bindcode $mod+11 workspace $ws2
+bindcode $mod+12 workspace $ws3
+bindcode $mod+13 workspace $ws4
+bindcode $mod+14 workspace $ws5
+bindcode $mod+15 workspace $ws6
+bindcode $mod+16 workspace $ws7
+bindcode $mod+17 workspace $ws8
+bindcode $mod+18 workspace $ws9
+bindcode $mod+19 workspace $ws10
+bindcode $mod+Shift+10 move container to workspace $ws1
+bindcode $mod+Shift+11 move container to workspace $ws2
+bindcode $mod+Shift+12 move container to workspace $ws3
+bindcode $mod+Shift+13 move container to workspace $ws4
+bindcode $mod+Shift+14 move container to workspace $ws5
+bindcode $mod+Shift+15 move container to workspace $ws6
+bindcode $mod+Shift+16 move container to workspace $ws7
+bindcode $mod+Shift+17 move container to workspace $ws8
+bindcode $mod+Shift+18 move container to workspace $ws9
+bindcode $mod+Shift+19 move container to workspace $ws10
+bindcode $mod+Shift+27 reload
+bindcode $mod+Shift+26 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindcode $mod+27 mode "resize"
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
+bindsym $option+Up exec --no-startup-id amixer -q sset Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
+bindsym $option+Down exec --no-startup-id amixer -q sset Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master 1+ toggle
+bindsym --whole-window button8 exec --no-startup-id amixer set Master 1+ toggle
+bindsym control+space exec $HOME/bin/togglekeyboard
+exec setxkbmap pl -variant dvp
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo xbacklight -fps 100 -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo xbacklight -fps 100 -inc 5
+bindsym XF86KbdBrightnessDown exec --no-startup-id sudo xbacklight -fps 1000 -ctrl 'smc::kbd_backlight' -dec 5
+bindsym XF86KbdBrightnessUp exec --no-startup-id sudo xbacklight -fps 1000 -ctrl 'smc::kbd_backlight' -inc 5
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym $option+End exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym $option+Right exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym $option+Left exec playerctl previous
+bindcode $mod+shift+58 exec $HOME/bin/lock
+bindsym Pause exec $HOME/bin/lock
+bindsym Scroll_Lock exec systemctl suspend
+## /include ../snippets/keybinds-basic
+default_border none
+default_floating_border none
+exec picom
+exec firefox
+exec xscreensaver
+exec albert
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
+exec_always --no-startup-id numlockx on
+bindcode $mod+shift+47 exec spectacle
+bindsym Print exec spectacle
+exec --no-startup-id $HOME/bin/background/background
+bindsym --whole-window button9 exec pkill -HUP background
+## /include traits/global
+## include snippets/raptor
+exec pqiv -ci --disable-scaling '/home/glenn/Pictures/Velociraptor_BW_by_SilverXenomorph.png'
+for_window [class="Pqiv"] floating enable
+## /include snippets/raptor
+## include traits/i3bar-basic
+bar {
+  status_command i3blocks -c ~/.config/i3blocks/config
+  tray_output primary
+  position top
+  i3bar_command i3bar --transparency
+  colors {
+    background #000000CC
+  }
+  font pango:Proza Libre 10
+}
+## /include traits/i3bar-basic

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+ACTIVE_WORKSPACE=`i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name'`
+ACTIVE_WORKSPACE_NUM=`i3-msg -t get_workspaces | jq '.[] | select(.focused==true).num'`
+i3-input -F "rename workspace $ACTIVE_WORKSPACE to \"$ACTIVE_WORKSPACE_NUM: %s\"" -P 'Workspace name: '
