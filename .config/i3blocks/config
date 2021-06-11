@@ -1,0 +1,43 @@
+#[calc-button]
+#full_text=Calculator
+#command=gnome-calculator >/dev/null
+
+[time]
+command=$HOME/scripts/i3blocks/date.sh
+interval=1
+
+[weather]
+command=$HOME/scripts/i3blocks/weather.sh
+interval=3600
+color=#A4C2F4
+
+[nordvpn]
+command=$HOME/scripts/i3blocks/nordvpn.sh
+interval=300
+
+[temp]
+command=$HOME/scripts/i3blocks/temp.sh
+interval=5
+
+[wifi]
+command=$HOME/scripts/i3blocks/wifi.sh
+interval=10
+
+[battery]
+command=$HOME/scripts/i3blocks/battery.sh
+interval=10
+
+[memory]
+command=$HOME/scripts/i3blocks/mem.sh
+interval=5
+
+[CPU]
+command=$HOME/scripts/i3blocks/cpu
+interval=persist
+min_width=⣾⣄⣾⣄ 100.00%
+
+
+#battery, %, time
+#disk
+#cpu
+#date
