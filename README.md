@@ -3,7 +3,7 @@
 ## Quick-start
 
 ```bash
-curl -o- --silent --fail https://raw.githubusercontent.com/Juravenator/dotfiles/master/install.sh
+curl -sfo- https://raw.githubusercontent.com/Juravenator/dotfiles/master/install.sh | bash
 ```
 
 ## Adjusting i3 config
