@@ -129,7 +129,7 @@ function brightness {
   xrandr --output DisplayPort-1 --brightness $1
 }
 
-alias docker-here='docker run -it --mount type=bind,source=$(pwd),target=/mnt'
+alias docker-here='docker run -it --mount type=bind,source=$(pwd),target=/mnt --workdir=/mnt'
 alias cactus-review='https_proxy=socks5://localhost:12333 kubectl'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
