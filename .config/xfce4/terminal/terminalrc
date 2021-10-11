@@ -30,7 +30,7 @@ DropdownOpacity=57
 ColorForeground=#839496
 ColorBackground=#002b36
 ColorCursor=#93a1a1
-ColorPalette=rgb(7,54,66);rgb(220,50,47);rgb(133,153,0);rgb(181,137,0);rgb(38,139,210);rgb(211,54,130);rgb(42,161,152);rgb(238,232,213);rgb(0,43,54);rgb(203,75,22);rgb(133,153,0);rgb(181,137,0);rgb(38,139,210);rgb(108,113,196);rgb(42,161,152);rgb(253,246,227)
+ColorPalette=rgb(7,54,66);rgb(220,50,47);rgb(133,153,0);rgb(181,137,0);rgb(38,139,210);rgb(211,54,130);rgb(42,161,152);rgb(238,232,213);rgb(25,168,204);rgb(203,75,22);rgb(133,153,0);rgb(181,137,0);rgb(38,139,210);rgb(108,113,196);rgb(42,161,152);rgb(253,246,227)
 ColorBold=#93a1a1
 ColorBoldUseDefault=FALSE
 TabActivityColor=#dc322f
@@ -40,4 +40,5 @@ BackgroundImageFile=/home/glenn/Pictures/dinosaurs/Dinosaur-Desktop-Background.j
 BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_STRETCHED
 BackgroundImageShading=0.550000
 ScrollingUnlimited=TRUE
+FontName=MesloLGS NF 12
 
