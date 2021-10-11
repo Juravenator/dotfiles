@@ -136,3 +136,11 @@ alias cactus-review='https_proxy=socks5://localhost:12333 kubectl'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ ! -f $HOME/.cargo/env ]] || source $HOME/.cargo/env
 [[ ! -f /usr/share/nvm/init-nvm.sh ]] || source /usr/share/nvm/init-nvm.sh
+[[ ! -f $HOME/.nvm/nvm.sh ]] || source $HOME/.nvm/nvm.sh
+[[ ! -f $HOME/.nvm/bash_completion ]] || source $HOME/.nvm/bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source $HOME/.rvm/scripts/rvm
+
+[ ! -f "/home/glenn/.jabba/jabba.sh" ] || source "/home/glenn/.jabba/jabba.sh"
