@@ -133,7 +133,7 @@ alias docker-here='docker run -it --mount type=bind,source=$(pwd),target=/mnt --
 alias cactus-review='https_proxy=socks5://localhost:12333 kubectl'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 [[ ! -f $HOME/.cargo/env ]] || source $HOME/.cargo/env
 [[ ! -f /usr/share/nvm/init-nvm.sh ]] || source /usr/share/nvm/init-nvm.sh
 [[ ! -f $HOME/.nvm/nvm.sh ]] || source $HOME/.nvm/nvm.sh
@@ -141,6 +141,6 @@ alias cactus-review='https_proxy=socks5://localhost:12333 kubectl'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-source $HOME/.rvm/scripts/rvm
+[[ ! -f $HOME/.rvm/scripts/rvm ]] || source $HOME/.rvm/scripts/rvm
 
-[ ! -f "/home/glenn/.jabba/jabba.sh" ] || source "/home/glenn/.jabba/jabba.sh"
+[[ ! -f $HOME/.jabba/jabba.sh ]] || source $HOME/.jabba/jabba.sh
