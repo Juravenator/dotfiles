@@ -1,7 +1,7 @@
 ###########################################################
-# Automatically generated on Do 07 Okt 2021 11:51:40 CEST
+# Automatically generated on Mon 11 Oct 15:55:39 CEST 2021
 # Do not edit. Rather, re-generate using command
-# bash build.sh snippets/raptor traits/i3bar-basic > config
+# bash build.sh snippets/raptor snippets/default-layout-tabbed traits/i3bar-basic > config
 ###########################################################
 
 ## include traits/global
@@ -113,6 +113,9 @@ bindsym --whole-window button9 exec pkill -HUP background
 exec pqiv -ci --disable-scaling "$HOME/Pictures/Velociraptor_BW_by_SilverXenomorph.png"
 for_window [class="Pqiv"] floating enable
 ## /include snippets/raptor
+## include snippets/default-layout-tabbed
+workspace_layout tabbed
+## /include snippets/default-layout-tabbed
 ## include traits/i3bar-basic
 bar {
   status_command i3blocks -c ~/.config/i3blocks/config
