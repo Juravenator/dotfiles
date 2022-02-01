@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+# Disables wakeup for all devices
+# As a consequence, wakeup is only possible by means of pressing the power button by the user
+# Bye bye pesky Linux sleep mode trouble
+
+for d in $(cat /proc/acpi/wakeup | grep '*enabled' | cut -d' ' -f1); do
+  echo "disabling wakeup for '$d'"
+  echo "$d" > /proc/acpi/wakeup
+done

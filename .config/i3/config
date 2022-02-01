@@ -1,7 +1,7 @@
 ###########################################################
-# Automatically generated on Mon 11 Oct 15:55:39 CEST 2021
+# Automatically generated on Tue  1 Feb 10:06:01 CET 2022
 # Do not edit. Rather, re-generate using command
-# bash build.sh snippets/raptor snippets/default-layout-tabbed traits/i3bar-basic > config
+# bash build.sh snippets/raptor snippets/default-layout-tabbed snippets/disable-wakeup traits/i3bar-basic > config
 ###########################################################
 
 ## include traits/global
@@ -116,6 +116,9 @@ for_window [class="Pqiv"] floating enable
 ## include snippets/default-layout-tabbed
 workspace_layout tabbed
 ## /include snippets/default-layout-tabbed
+## include snippets/disable-wakeup
+exec $HOME/bin/disableWakeup
+## /include snippets/disable-wakeup
 ## include traits/i3bar-basic
 bar {
   status_command i3blocks -c ~/.config/i3blocks/config
