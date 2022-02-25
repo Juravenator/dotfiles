@@ -36,8 +36,3 @@ command=$HOME/bin/i3blocks/cpu/cpu
 interval=persist
 min_width=⣾⣄⣾⣄ 100.00%
 
-
-#battery, %, time
-#disk
-#cpu
-#date

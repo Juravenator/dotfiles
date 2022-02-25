@@ -38,7 +38,7 @@ BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.940000
 BackgroundImageFile=/home/glenn/Pictures/dinosaurs/Dinosaur-Desktop-Background.jpg
 BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_STRETCHED
-BackgroundImageShading=0.550000
+BackgroundImageShading=0,550000
 ScrollingUnlimited=TRUE
-FontName=MesloLGS NF 12
+FontName=Ubuntu Mono 12
 
